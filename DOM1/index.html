@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Приклади</title>
-    <link rel="stylesheet" href="example.css">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="title">Привіт, світ!</h1>
-    <p class="description">Це приклад роботи з DOM.</p>
-    <ul id="itemList">
-        <li class="item">Пункт 1</li>
-        <li class="item">Пункт 2</li>
-        <li class="item">Пункт 3</li>
-    </ul>
-    <div class="buttons">
-      <button id="changeTextButton">Змінити текст</button>
-      <button id="addItemButton">Додати пункт</button>
+    <div class="calculator">
+        <h2> НУБІП Калькулятор</h2>
+        <input type="text" id="num1" placeholder="Введіть перше число">
+        <input type="text" id="num2" placeholder="Введіть друге число">
+        
+        <div class="buttons">
+            <button onclick="calculate('add')">+</button>
+            <button onclick="calculate('subtract')">-</button>
+            <button onclick="calculate('multiply')">×</button>
+            <button onclick="calculate('divide')">÷</button>
+        </div>
+        
+        <p id="result">Результат: </p>
+        <p id="error" class="error"></p>
     </div>
-   
-
-    <script src="example.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
